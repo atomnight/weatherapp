@@ -1,0 +1,124 @@
+/* variables */
+:root {
+    --aqua-color: aqua;
+    --primary-dark: #1e212d;
+    --secondary-dark: #6870e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* grid-entire-page-container layer */
+#page-container {
+    /* border: 5px solid hotpink; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 70px 140px auto 210px 80px;
+    height: 100vh;
+}
+
+#title-container {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.3em;
+    font-weight: 500;
+    background-color: var(--primary-dark);
+    color: rgb(255, 255, 255);
+}
+
+#search-wrapper {
+    /* border: 2px solid aqua; */
+    grid-column-start: span 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-dark);
+}
+
+#search {
+    width: 500px;
+    max-width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+#main-content-container {
+    grid-column-start: span 2;
+    background-image: url(./space.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: white;
+}
+
+#wind-content-container {
+    grid-column-start: span 2;
+    background-image: url(./stars.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: white;
+}
+
+#weather-content-container {
+    /* border: 2px solid aqua; */
+    grid-column-start: span 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--secondary-dark);
+    color: white;
+}
+
+#footer-container {
+    /* border: 2px solid aqua; */
+    grid-column-start: span 4;
+    background-color: var(--primary-dark);
+}
+
+.font-content {
+    font-size: clamp(1.4em, 2vw + 1em, 2.1em);;
+    font-weight: 500;
+}
